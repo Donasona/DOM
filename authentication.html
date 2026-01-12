@@ -10,9 +10,19 @@
     <h2>Authentication in DRF verfies user identity for API access</h2>
     <p>Click the button to get the list of authentication</p>
     <button>Authentication Type</button>
+    <ol id="order">Auth types</ol>
+
 <script>
     function listAuth(){
-        document.createElement
+        items = document.getElementById("order")
+        var result = document.createElement("li")         // only the <li>tag
+        result.innerText = "BasicAuthentication"
+        items.append(result)
+
+        items = document.getElementById("order")
+        var result = document.createElement("li")         // only the <li>tag
+        result.innerText = "TokenAuthentication"
+        items.append(result)
     }
 </script>
 </body>
