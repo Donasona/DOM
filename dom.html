@@ -7,20 +7,26 @@
 </head>
 
 <body>
-    <h1>Javascript</h1>
+    <h1 id="head">Javascript</h1>
     <h2 id="hello">DOM (Document Object Model)</h2>
     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto, voluptas quas veniam, reprehenderit esse enim optio molestias veritatis, quibusdam magnam nulla alias ipsa voluptate. Quod veniam enim nulla corporis!</h3>
     <button onclick="ChangeText()">Change Text</button>
+    <button onclick="ChangeColor()">Change Color</button>
+
 
 <script>
     function ChangeText(){
         document.getElementById("hello").innerText="Dom"
     }
+
+    function ChangeColor(){
+        document.getElementById("head").style.color="red"
+    }
 </script>
 </body>
 </html>
 <!-- DOM WORK CYCLE -->
- =====================
+<!-- ============= -->
 <!-- the buttom click happens in html -->
  <!-- then html calls javascript function -->
   <!-- javascript changes DOM -->
