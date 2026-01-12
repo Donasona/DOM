@@ -16,11 +16,25 @@
 
 <script>
     function ChangeText(){
-        document.getElementById("hello").innerText="Dom"
+        // document.getElementById("hello").innerText="Dom"
+        const text = document.getElementById("hello")
+        if(text.innerText=="Dom"){
+            text.innerText = "DOM (Document Object Model)"
+        }
+        else{
+            text.innerText = "Dom"
+        }
     }
 
     function ChangeColor(){
-        document.getElementById("head").style.color="red"
+        // document.getElementById("head").style.color="red"
+        const heading = document.getElementById("head")
+        if (heading.style.color=="red"){
+            heading.style.color="black"
+        }
+        else{
+            heading.style.color="red"
+        }
     }
 </script>
 </body>
