@@ -8,13 +8,13 @@
 
 <body>
     <h1>Javascript</h1>
-    <h2>DOM (Document Object Model)</h2>
+    <h2 id="hello">DOM (Document Object Model)</h2>
     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto, voluptas quas veniam, reprehenderit esse enim optio molestias veritatis, quibusdam magnam nulla alias ipsa voluptate. Quod veniam enim nulla corporis!</h3>
-    <button onclick=ChangeText()>Change Text</button>
+    <button onclick="ChangeText()">Change Text</button>
 
 <script>
     function ChangeText(){
-        document.getElementsByTagName("h2").innerText="Dom"
+        document.getElementById("hello").innerText="Dom"
     }
 </script>
 </body>
