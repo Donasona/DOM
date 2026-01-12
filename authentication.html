@@ -9,20 +9,42 @@
     <h1>Authentication in DRF</h1>
     <h2>Authentication in DRF verfies user identity for API access</h2>
     <p>Click the button to get the list of authentication</p>
-    <button>Authentication Type</button>
+    <button onclick="listAuth()">Authentication Type</button>
     <ol id="order">Auth types</ol>
+    <button onclick="PermissionAuth()">Permission Type</button>
+    <ol id="permission">Permission types</ol>
 
 <script>
     function listAuth(){
-        items = document.getElementById("order")
-        var result = document.createElement("li")         // only the <li>tag
-        result.innerText = "BasicAuthentication"
-        items.append(result)
+        // items = document.getElementById("order")
+        // var result = document.createElement("li")         // only the <li>tag
+        // result.innerText = "BasicAuthentication"
+        // items.append(result)
+
+        // var result1 = document.createElement("li")         // only the <li>tag
+        // result1.innerText = "TokenAuthentication"
+        // items.append(result1)
 
         items = document.getElementById("order")
-        var result = document.createElement("li")         // only the <li>tag
-        result.innerText = "TokenAuthentication"
-        items.append(result)
+        items.innerText = ""
+        const auths = ["BasicAuthentication","TokenAuthentication","Session Authentication","JWT"]
+        for(let i of auths){
+            result = document.createElement("li")
+            result.innerText = i
+            items.append(result)
+        }
+
+    }
+
+    function PermissionAuth(){
+        let item = document.getElementById("permission")
+        item.innerText = ""
+        const permission = ["AllowAny","Authenticated"]
+        for(let j of permission){
+            let results = document.createElement("li")
+            results.innerText = j
+            item.append(results)
+        }
     }
 </script>
 </body>
