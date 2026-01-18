@@ -12,13 +12,17 @@
         <br><br>
         <input type="number" id="number2" placeholder="enter the second number">
         <br><br>
-        <input type="text" id="result">
+        <input type="text" name="" id="result">
 
-        <button>Sum</button>
+        <button type="button" onclick="addition()">Sum</button>
     </form>
     <script>
         function addition(){
-            
+            num1 = document.getElementById("number1").value
+            num2 = document.getElementById("number2").value
+            let sum = Number(num1) + Number(num2)
+            result = document.getElementById("result")
+            result.value = sum
         }
     </script>
 </body>
