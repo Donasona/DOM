@@ -16,9 +16,9 @@ function check(){
 
     }
     else if (guess == ""){
-        document.querySelector("#secret").innerText ="No Number"
+        document.querySelector("#secret").innerHTML ="No Number"
     }
-    if (guess<secretNum){
+    if (guess < secretNum){
 
         if(score>1){
             score--
